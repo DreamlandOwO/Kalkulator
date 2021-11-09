@@ -12,22 +12,35 @@
 -->
 
 <!DOCTYPE html>
+<!-- Standard -->
 <html lang="no">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Neon Kalkulator</title>
+    <title>NeoCalc™</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Preloader -->
+    <div id="preloader">
+    	<div id="status">&nbsp;</div>
+    </div>
+	<!-- Main Container -->
     <div class="main-container">
         <div class="calc-container">
+		  <!-- Header -->
+          <div class="header">
+            <h1><center style="font-size: 60px">NeoCalc™</center></h1>
+            <h6><center>By Mellowie</center></h6>
+          </div>
+		  	<!-- Calculator -->
             <div id="input" class="">
             </div>
             <div id='buttons-container'>
                 <div style="margin-right: 10px" class="btn btn-operator " onclick="clearInput()">C</div>
-                <div style="margin-right: 10px" class="btn btn-operator " onclick="eraseNum()">⌦</div>
+                <div style="margin-right: 10px" class="btn btn-operator " onclick="eraseNum()">«</div>
                 <div style="margin-right: 10px" class="btn btn-operator " onclick="insertNum('/')">/</div>
                 <div class="btn btn-operator " onclick="insertNum('*')">x</div>
 
@@ -50,6 +63,7 @@
             </div>
         </div>
     </div>
+	<!-- Script ref -->
 	<script src="code.js"></script>
   </body>
 </html>
