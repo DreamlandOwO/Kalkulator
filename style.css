@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* , html, body, p {
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin-top: 10%;
+    background-color: #191414;
+}
+
+
+/*  Grid  */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.calc-container {
+    display: grid;
+}
+
+/*  Input  */
+#input {
+    margin-left: 8px;
+    margin-right: 0px;
+    box-shadow: 0 0px 5px white, 0 0px 18px white;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    width: 98%;
+    height: 2em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #FDFEFE;
+    padding-right: 10px;
+    font-size: 3em;
+    text-align: right;
+    background-color: #212a32;
+    transition: all 0.3s ease-in
+}
+
+#buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    text-align: center;
+
+}
+
+/*  Btn's  */
+.btn {
+    margin-top: 16px;
+    margin-left: 8px;
+    margin-right: 5px;
+    box-shadow: 0 0px 5px white, 0 2px 12px white;
+    border-radius: 25px;
+    display: flex;
+    font-size: 1.2em;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    transition: all 0.1s ease-in;
+    border: 0.3px solid rgba(251, 253, 255, 0.171);
+}
+
+.dot {
+    grid-column: span 2;
+}
+
+.equal {
+    grid-row: span 2;
+}
+
+.btn-num {
+    background-color: #212a32;
+    color: #d7e2de;
+}
+
+.btn-num:hover {
+    background-color: #212a32;
+}
+
+.btn-operator {
+
+    background-color: #f58020;
+    color: #ffffff;
+}
+
+.btn-operator:hover {
+    background-color: #ffc20e !important
+}
+
+.equal{
+    background-color: #f58020;
+}
