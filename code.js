@@ -1,14 +1,14 @@
-// Value input variable
+// Verdi input variabel
 const inputField = document.getElementById('input');
 
-// Insert number on input fied
+// Sett inn nummer i input feltet
 const insertNum = num => inputField.textContent += num;
 
-// Do operation using eval()
+// Regn ut stykke med eval()
 const equalTo = () => (inputField.textContent) ? inputField.textContent = eval(inputField.textContent) : false;
 
-// Remove 1 val at time
+// Fjern 1 val(verdi) i samtid
 const eraseNum = () => inputField.textContent = inputField.textContent.substring(0, inputField.textContent.length - 1);
 
-// Clear all the input
+// Fjern alt i feltet
 const clearInput = () => inputField.textContent = '';
