@@ -25,3 +25,10 @@ const eraseNum = () => inputField.textContent = inputField.textContent.substring
 
 // Fjern alt i feltet
 const clearInput = () => inputField.textContent = '';
+
+/*  Preloader  */
+$(window).on('load', function() { // makes sure the whole site is loaded 
+    $('#status').fadeOut(); // will first fade out the loading animation 
+    $('#preloader').delay(400).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+    $('body').delay(1000).css({'overflow':'visible'});
+  })

@@ -13,6 +13,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+/*  Global  */
 * , html, body, p {
     box-sizing: border-box;
     font-family: 'Roboto Mono', monospace;
@@ -20,9 +21,41 @@
     margin: 0;
     padding: 0;
 }
+
+/*  Body  */
 body{
-    margin-top: 10%;
+    margin-top: 5%;
     background-color: #191414;
+    overflow: hidden;
+}
+
+/*  Preloader  */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #191414;
+    z-index: 99;
+  }
+  
+  #status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+  }
+
+/*  Header  */
+.header {
+    color: #fff;
+    margin-bottom: 50px;
+    position: flex;
 }
 
 
