@@ -24,9 +24,20 @@
 
 /*  Body  */
 body{
-    margin-top: 5%;
+    margin-top: 2%;
     background-color: #191414;
     overflow: hidden;
+}
+
+/*  Remove text highlighting  */
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
 }
 
 /*  Preloader  */
@@ -65,7 +76,7 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 0%;
     width: 100%;
 }
 
