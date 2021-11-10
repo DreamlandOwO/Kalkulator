@@ -1,4 +1,4 @@
-###### Kalkulator
+# Kalkulator
 
 This is a calculator made for a school project.
 
