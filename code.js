@@ -11,6 +11,14 @@
 
 */
 
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+}
+
 // Verdi input variabel
 const inputField = document.getElementById('input');
 
@@ -27,8 +35,9 @@ const eraseNum = () => inputField.textContent = inputField.textContent.substring
 const clearInput = () => inputField.textContent = '';
 
 /*  Preloader  */
-$(window).on('load', function() { // makes sure the whole site is loaded 
+$(window).on('load', function() { 
+    // makes sure the whole site is loaded 
     $('#status').fadeOut(); // will first fade out the loading animation 
     $('#preloader').delay(400).fadeOut('slow'); // will fade out the white DIV that covers the website. 
     $('body').delay(1000).css({'overflow':'visible'});
-  })
+})
