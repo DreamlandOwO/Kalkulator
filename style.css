@@ -65,9 +65,8 @@ body{
 /*  Header  */
 .header {
     color: #fff;
-    margin-bottom: 0;
     width: 40%;
-    padding-left: 0%;
+    padding-left: 0;
     margin: 0;
     padding-top: 5%;
     line-height: 280%;
@@ -76,17 +75,14 @@ body{
 
 /*  Grid  */
 .main-container {
-    place-items: auto center;
     display: flex;
-    position: center;
     justify-content: center;
-    margin-bottom: 0%;
+    margin-bottom: 0;
     width: 100%;
 }
 
-
+/** ---------------- Calculator BEGIN ---------------- */
 .calc-container {
-    display: grid;
     padding-left: 10%;
     padding-top: 3%;
 }
@@ -115,13 +111,12 @@ body{
     display: grid;
     grid-template-columns: repeat(4, auto);
     text-align: center;
-
+    margin-right: -5px;
+    margin-left: -5px;
 }
 
 /*  Btn's  */
 .btn {
-    margin-top: 16px;
-    margin-left: 8px;
     box-shadow: 0 0px 5px white, 0 2px 12px white;
     border-radius: 15px;
     display: flex;
@@ -132,6 +127,7 @@ body{
     padding: 20px 30px;
     transition: all 0.1s ease-in;
     border: 0.3px solid rgba(251, 253, 255, 0.171);
+    margin: 16px 10px 0;
 }
 
 .dot {
@@ -152,7 +148,6 @@ body{
 }
 
 .btn-operator {
-
     background-color: #f58020;
     color: #ffffff;
 }
@@ -163,4 +158,54 @@ body{
 
 .equal{
     background-color: #f58020;
+}
+/** ---------------- Calculator END ---------------- */
+
+@media screen and (max-width: 750px) {
+    /** ---------------- Container ---------------- */
+    .main-container {
+        flex-direction: column;
+    }
+
+    .header {
+        order: 1;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 20vh;
+        width: 100%;
+    }
+
+    /** ---------------- Calculator BEGIN ---------------- */
+    .calc-container {
+        padding: min(5vh, 10px) min(5vw, 10px);
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #buttons-container {
+        grid-template-rows: repeat(5, 15vh);
+    }
+
+    #input {
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .btn {
+        padding: 0;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    /** ---------------- Calculator END ---------------- */
+}
+
+@media screen and (max-width: 470px) {
+    /** ---------------- Calculator BEGIN ---------------- */
+    .calc-container {
+        width: 100%;
+    }
+    /** ---------------- Calculator END ---------------- */
 }
